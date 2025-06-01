@@ -1,0 +1,84 @@
+app.get("/home", async (req, res) => {
+  try {
+    console.log(
+      "Mengakses route /home untuk merender index.hbs dengan data skills dan work..."
+    );
+
+    // 1. Ambil data skills
+    const skillsResult = await pool.query(
+      "SELECT id, skill_name, icon_filename FROM public.skills ORDER BY id ASC"
+    );
+    let skillsFromDB = skillsResult.rows;
+    console.log("Data skills dari DB:", JSON.stringify(skillsFromDB, null, 2));
+
+    const totalItemsForCarousel = 10;
+    let skillsForCarouselDisplay = [];
+    if (skillsFromDB.length > 0) {
+      for (let i = 0; i < totalItemsForCarousel; i++) {
+        skillsForCarouselDisplay.push({
+          skill: skillsFromDB[i % skillsFromDB.length],
+          itemClass: `item${i + 1}`,
+        });
+      }
+    } else {
+      console.log(
+        "Tidak ada skills di DB, menggunakan placeholder untuk carousel skills."
+      );
+      for (let i = 0; i < totalItemsForCarousel; i++) {
+        skillsForCarouselDisplay.push({
+          skill: {
+            skill_name: `Contoh ${i + 1}`,
+            icon_filename: "placeholder.png",
+          },
+          itemClass: `item${i + 1}`,
+        });
+      }
+    }
+    console.log(
+      "Data skills yang akan dikirim ke template:",
+      JSON.stringify(skillsForCarouselDisplay, null, 2)
+    );
+
+    // 2. Ambil data pengalaman kerja (work)
+    // Pastikan Anda sudah menambahkan kolom 'position_title' jika ada
+    const workResult = await pool.query(
+      "SELECT id, name, position_title, location, start_date, end_date, jobdesc, techs, image FROM public.work ORDER BY start_date DESC" // Urutkan berdasarkan tanggal mulai terbaru
+    );
+    let workExperiencesFromDB = workResult.rows;
+
+    // Format tanggal untuk setiap pengalaman kerja
+    const formattedWorkExperiences = workExperiencesFromDB.map((job) => ({
+      ...job,
+      display_start_date: formatWorkDate(job.start_date),
+      display_end_date: formatWorkDate(job.end_date),
+      jobdesc_list: Array.isArray(job.jobdesc)
+        ? job.jobdesc
+        : job.jobdesc
+        ? [job.jobdesc]
+        : [], // Pastikan jobdesc adalah array
+      techs_list: Array.isArray(job.techs)
+        ? job.techs
+        : job.techs
+        ? [job.techs]
+        : [], // Pastikan techs adalah array
+    }));
+    console.log(
+      "Data work dari DB (setelah format):",
+      JSON.stringify(formattedWorkExperiences, null, 2)
+    );
+
+    // 3. Render 'index.hbs' dan kirim kedua data ke template
+    res.render("index", {
+      skillsForCarousel: skillsForCarouselDisplay,
+      workExperiences: formattedWorkExperiences, // Kirim data pengalaman kerja
+      pageTitle: "Beranda - Djembar Arafat", // Contoh data tambahan
+    });
+  } catch (err) {
+    console.error("Error di route /home:", err.stack);
+    res
+      .status(500)
+      .send(
+        "Terjadi kesalahan saat memuat halaman. Silakan coba lagi nanti atau cek konsol server."
+      );
+  }
+});

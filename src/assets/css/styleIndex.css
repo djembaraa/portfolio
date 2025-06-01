@@ -1,0 +1,92 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper,
+.wrapper ::before,
+.wrapper ::after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px; /* Tinggi wrapper bisa disesuaikan jika item lebih pendek */
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* MODIFIED: Keyframes untuk scroll ke kanan dengan item lebih ramping */
+@keyframes scrollRight {
+  from {
+    left: -120px; /* SESUAIKAN: Cocokkan dengan lebar item baru */
+  }
+  to {
+    /* SESUAIKAN: Gunakan lebar item baru dalam kalkulasi */
+    left: max(calc(120px * 8), 100%);
+  }
+}
+
+.item {
+  width: 120px; /* SESUAIKAN: Lebar item diperkecil */
+  height: 100px; /* Tinggi item bisa disesuaikan agar pas dengan konten */
+  /* background-color: red; */ /* HAPUS atau UBAH: Jika tidak ingin latar merah */
+  background-color: transparent; /* Agar hanya ikon dan teks terlihat */
+  border-radius: 6px;
+  position: absolute;
+  left: -120px; /* SESUAIKAN: Cocokkan dengan lebar item baru dan @keyframes from */
+  animation-name: scrollRight;
+  animation-duration: 30s; /* Durasi bisa disesuaikan jika ingin scroll lebih cepat/lambat */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: scale 0.3s ease-in-out;
+}
+
+.item:hover {
+  scale: 1.1;
+}
+
+/* Style untuk delay animasi item (tidak berubah karena jumlah item tetap 8) */
+/* Style untuk delay animasi item (untuk 10 item, durasi 30s) */
+.item1 {
+  animation-delay: calc(30s / 10 * (10 - 1) * -1);
+} /* Ini akan menjadi -27s */
+.item2 {
+  animation-delay: calc(30s / 10 * (10 - 2) * -1);
+} /* Ini akan menjadi -24s */
+.item3 {
+  animation-delay: calc(30s / 10 * (10 - 3) * -1);
+} /* Ini akan menjadi -21s */
+.item4 {
+  animation-delay: calc(30s / 10 * (10 - 4) * -1);
+} /* Ini akan menjadi -18s */
+.item5 {
+  animation-delay: calc(30s / 10 * (10 - 5) * -1);
+} /* Ini akan menjadi -15s */
+.item6 {
+  animation-delay: calc(30s / 10 * (10 - 6) * -1);
+} /* Ini akan menjadi -12s */
+.item7 {
+  animation-delay: calc(30s / 10 * (10 - 7) * -1);
+} /* Ini akan menjadi -9s */
+.item8 {
+  animation-delay: calc(30s / 10 * (10 - 8) * -1);
+} /* Ini akan menjadi -6s */
+.item9 {
+  animation-delay: calc(30s / 10 * (10 - 9) * -1);
+} /* Ini akan menjadi -3s */
+.item10 {
+  animation-delay: calc(30s / 10 * (10 - 10) * -1);
+} /* Ini akan menjadi 0s */

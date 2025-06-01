@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djembar Arafat</title>
+    <link rel="stylesheet" href="/css/styleIndex.css">
+    <link rel="stylesheet" href="./css/tailwind/dist/output.css">
+</head>
+  <body>
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      {{!-- Konten header Anda --}}
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex-1 md:flex md:items-center md:gap-12">
+            <a href="/home"
+              class="ml-2 flex-shrink-0 inline-flex items-center bg-[#1b1f29] px-3 py-2 text-white text-xl font-bold transition-transform duration-300 ease-in-out hover:scale-115">
+              DJ
+            </a>
+          </div>
+          <nav class="hidden md:block">
+            <ul class="flex items-center gap-4 lg:gap-6 text-sm">
+              <li><a class="text-gray-900 transition hover:text-gray-500/75" href="#skills">Tech Stack</a></li>
+              <li><a class="text-gray-900 transition hover:text-gray-500/75" href="#experience">Experience</a></li>
+              <li><a class="text-gray-900 transition hover:text-gray-500/75" href="#projects">Projects</a></li>
+              <li>
+                <a href="wa.me/6281282160934"
+                  class="flex items-center gap-2 rounded-md bg-[#25D366] hover:bg-green-600 px-5 py-2.5 text-sm font-medium text-white shadow transition-colors duration-300 ease-in-out">
+                  <img src="/image/icons/whatsapp.png" class="w-5 h-5">
+                  <span>Let's Talk</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center gap-2 rounded-md bg-[#1b1f29] hover:bg-gray-700 px-5 py-2.5 text-sm font-medium text-white shadow transition-colors duration-300 ease-in-out"
+                  href="https://drive.google.com/file/d/1iVWDPXKfOgAgtkRoLlE2k1NsBlscecJw/view?usp=sharing" download> <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                  </svg>
+                  Download CV
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="md:hidden">
+            <button id="menu-toggle" class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white shadow-lg">
+        <ul class="space-y-2 text-sm">
+          <li><a class="block text-gray-900 transition hover:text-gray-500/75 py-2" href="/home">Home</a></li>
+          <li><a class="block text-gray-900 transition hover:text-gray-500/75 py-2" href="#experience">Work Experience</a>
+          </li>
+          <li><a class="block text-gray-900 transition hover:text-gray-500/75 py-2" href="#projects">Projects</a></li>
+          <li><a
+              class="block rounded-md bg-[#1b1f29] hover:bg-gray-700 px-4 py-2 text-sm font-medium text-white transition-colors"
+              href="wa.me/6281282160934">Contact Me</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="container mx-auto px-6 pt-6 pb-3 md:pt-24 md:pb-12">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-16 mb-4">
+          <div class="relative w-full lg:w-1/3 flex justify-center lg:justify-start">
+            <div class="relative group">
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+              </div>
+              <img src="/image/person/profile.jpg" alt="Profile"
+                class="relative w-64 h-64 lg:w-[320px] lg:h-[320px] rounded-xl shadow-lg object-cover transform transition duration-500 hover:scale-105">
+            </div>
+          </div>
+      
+          <div class="w-full lg:w-2/3 text-center lg:text-left">
+            <div class="mb-8">
+              <h1 class="text-4xl lg:text-6xl font-bold mb-6">Hi, I'm Djembar 👋</h1>
+              <p class="text-xl lg:text-2xl text-gray-600  font-medium mb-6">
+                Indie Hacker &amp; Full-Stack Developer
+              </p>
+              <p class="text-base lg:text-lg text-gray-600 leading-relaxed">
+                I'm Djembar Arafat, a passionate Fullstack Developer with a growing interest in Cyber Security. I specialize
+                in building
+                web applications using JavaScript for the frontend and Golang for the backend. Currently, I'm focused on
+                sharpening my
+                skills, building real-world projects, and exploring how security principles can be integrated into every layer
+                of
+                development.
+              </p>
+            </div>
+      
+            <div class="flex flex-col items-center lg:items-start space-y-3 mb-8">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-gray-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+                  </path>
+                </svg>
+                <span class="text-gray-500 ">Banyumas, Central Java, Indonesia</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span class="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
+                <span class="text-gray-500">Available for new projects</span>
+              </div>
+            </div>
+      
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+              <a href="wa.me/6281282160934" target="_blank"
+                class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition-colors flex items-center justify-center font-medium">
+                <img src="/image/icons/whatsapp.png" alt="WhatsApp" class="w-5 h-5 mr-2">
+                Let's Talk
+              </a>
+              <a href="https://drive.google.com/file/d/1iVWDPXKfOgAgtkRoLlE2k1NsBlscecJw/view?usp=sharing" target="_blank"
+                class="w-full sm:w-auto bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center font-medium">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                  </path>
+                </svg>
+                Download CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="skills">
+        <h2 class="text-2xl md:text-3xl font-bold mb-12 px-6 py-6">Tech Stack - Tools I Use Everyday</h2>
+      </div>
+      <div class="wrapper">
+        {{#if skillsForCarousel}}
+        {{#each skillsForCarousel}}
+        <div class="item {{this.itemClass}}">
+          {{!-- Pastikan path ke ikon benar. Misal /icons/namafile.png --}}
+          <img src="image/icons/{{this.skill.icon_filename}}" alt="{{this.skill.skill_name}}"
+            style="width: 60%; height: 60%; max-height: 60px; object-fit: contain; display: block; margin: 10px auto 5px auto;">
+          <p
+            style="text-align: center; color: black; font-size: 12px; margin: 0; padding: 0 5px; padding-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+            {{this.skill.skill_name}}
+          </p>
+        </div>
+        {{/each}}
+        {{else}}
+        <p style="color:white; text-align:center;">Tidak ada skills untuk ditampilkan.</p>
+        {{/if}}
+      </div>
+      <div id="experience">
+        <!-- Experience Section -->
+        <div class="mb-32">
+          <div class="flex justify-between items-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold px-6 py-6 mt-12">Work Experiences:</h2>
+          </div>
+          <div class="space-y-6">
+            {{#if workExperiences}}
+            {{#each workExperiences}}
+            <div class="flex flex-col md:flex-row items-start bg-white p-6 md:p-8 rounded-xl shadow-sm">
+              {{#if this.image}}
+              <img src="{{this.image}}" alt="Logo {{this.name}}"
+                class="w-16 h-16 rounded-lg mb-4 md:mb-0 object-contain bg-white">
+              {{else}}
+              <div class="w-16 h-16 rounded-lg mb-4 md:mb-0 bg-gray-200 flex items-center justify-center text-xs text-gray-400">No
+                Img</div>
+              {{/if}}
+              <div class="md:ml-8 flex-grow">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                  <div>
+                    <h3 class="font-semibold text-lg">{{this.name}}</h3>
+                      {{! --- NAMA PERUSAHAAN --- }}
+                      {{! Karena tidak ada kolom 'company_name' dari database, bagian ini perlu penyesuaian. }}
+                      {{! Opsi 1: Anda bisa hardcode jika ini adalah template untuk satu perusahaan saja (tidak mungkin). }}
+                      {{! Opsi 2: Jika nama perusahaan ada di bagian lain data (misal, 'location' atau bisa diambil dari 'image'),
+                      perlu logika tambahan. }}
+                      {{! Opsi 3: Untuk sekarang, Anda bisa menampilkan placeholder atau mengosongkannya. }}
+                      {{! Contoh placeholder: }}
+                      {{#if this.location}}
+                      <span class="text-gray-500"> {{this.location}}</span>
+                      {{/if}}
+                  </div>
+                  <span class="text-sm text-gray-500 mt-2 md:mt-0">{{this.display_start_date}} - {{this.display_end_date}}</span>
+                </div>
+                <ul class="text-gray-600 text-sm space-y-2 list-disc list-inside mb-4">
+                  {{#each this.jobdesc_list}}
+                  <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+                {{#if this.tech_list.length}} <div class="flex flex-wrap gap-2">
+                  {{#each this.tech_list}} <span
+                    class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">{{this}}</span>
+                  {{/each}}
+                </div>
+                {{/if}}
+              </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <p class="text-center text-gray-600">Belum ada pengalaman kerja untuk ditampilkan.</p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      <div id="projects">
+        <div class="mb-32">
+          <div class="flex justify-between items-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold">My Projects:</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            {{#if projectDjembaraa}}
+            {{#each projectDjembaraa}}
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden transition-colors hover:shadow-md">
+              <div class="relative h-52 flex items-center justify-center bg-gray-100">
+                {{#if this.image}}
+                <img src="{{this.image}}" alt="{{this.name}}"
+                  class="w-full h-full object-contain group-hover:opacity-90 transition-opacity">
+                {{else}}
+                <div class="w-full h-full flex items-center justify-center bg-gray-200">
+                  <span class="text-gray-500">No Image</span>
+                </div>
+                {{/if}}
+              </div>
+              <div class="p-6 md:p-8">
+                <h3 class="font-semibold text-xl mb-3">{{this.name}}</h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  {{this.description}} </p>
+      
+                {{#if this.projects_list.length}} <div class="flex flex-wrap gap-2 mb-6">
+                  {{#each this.projects_list}}
+                  <span
+                    class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">{{this}}</span>
+                  {{/each}}
+                </div>
+                {{/if}}
+      
+                <div class="flex gap-3">
+                  {{#if this.code}}
+                  <a href="{{this.code}}" target="_blank"
+                    class="inline-flex items-center px-3 py-1.5 text-xs text-blue-600 hover:text-blue-800 transition-colors">
+                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                      </path>
+                    </svg>
+                    Lihat Kode </a>
+                  {{else}}
+                  <span class="inline-flex items-center px-3 py-1.5 text-xs text-gray-500">
+                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                      </path>
+                    </svg>
+                    Kode Tidak Tersedia
+                  </span>
+                  {{/if}}
+      
+                  {{#if this.demo}}
+                  <a href="{{this.demo}}" target="_blank"
+                    class="inline-flex items-center px-3 py-1.5 text-xs text-blue-600  hover:text-blue-800 transition-colors">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                    Live Demo </a>
+                  {{else}}
+                  <span class="inline-flex items-center px-3 py-1.5 text-xs text-gray-500">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                    Demo Tidak Tersedia
+                  </span>
+                  {{/if}}
+                </div>
+              </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <p class="text-center text-gray-600">Belum ada proyek untuk ditampilkan.</p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      <div id="contact">
+        <!-- Contact Section -->
+        <div class="mb-20 text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">Let's build something
+            together</h2>
+          <p class="text-gray-600 dark:text-gray-400 text-sm mb-8">Feel free to reach
+            out if you're looking for a developer, have a question, or just want to
+            connect.</p>
+          <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+            <a href="mailto:suryaelidanto@gmail.com"
+              class="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+              <span class="text-sm">djembararafat98@gmail.com</span>
+            </a>
+            <span class="hidden md:inline text-gray-300">|</span>
+            <div class="flex items-center space-x-2">
+              <img src="/image/icons/whatsapp.png" alt="WhatsApp" class="w-5 h-5 mr-2">
+              <span class="text-sm">+62 81282160934</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="py-8 text-center text-gray-600 text-sm border-t border-gray-200">
+      <p>© 2025 Designed and coded with ❤️ by Djembar Arafat</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="https://github.com/djembaraa" target="_blank"
+          class="text-gray-400 hover:text-gray-600 transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/djembar-arafat-9a6602178/" target="_blank"
+          class="text-gray-400 hover:text-gray-600 transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="/js/scriptforindex.js"></script>
+  </body>
+</html>
